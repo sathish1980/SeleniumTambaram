@@ -6,6 +6,11 @@ public class sample {
 	{
 		System.out.println("git");
 	}
+	
+	public void add()
+	{
+		System.out.println("add");
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
