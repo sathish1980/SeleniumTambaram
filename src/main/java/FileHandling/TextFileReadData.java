@@ -13,8 +13,9 @@ public class TextFileReadData {
 	
 	public void TextfileReadonechar() throws IOException
 	{
-		File F = new File(filepath);
-		FileInputStream FI = new FileInputStream(F);
+		//File F = new File(filepath);
+		//FileInputStream FI = new FileInputStream(F);
+		FileInputStream FI = new FileInputStream(filepath);
 		System.out.println((char)FI.read());
 		
 	}
