@@ -53,6 +53,21 @@ public class MouseActions {
 		mouse.moveToElement(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[1]"))).dragAndDropBy(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[1]")), -40, 0).perform();
 		mouse.moveToElement(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[2]"))).dragAndDropBy(driver.findElement(By.xpath("//*[@id='form:j_idt125']//span[2]")), 80, 0).perform();
 	}
+	
+	public void progressbar()
+	{
+		driver.manage().window().maximize();
+		driver.navigate().to("https://leafground.com/drag.xhtml");
+		JavascriptExecutor js= (JavascriptExecutor)driver;
+		WebElement startbutton=driver.findElement(By.xpath("//*[text()='Start']//parent::button"));
+		js.executeScript("arguments[0].scrollIntoView();", startbutton);
+		driver.findElement(By.xpath("//*[text()='Start']//parent::button")).click();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//*[@class='ui-progressbar-label']")),"100%"));
+		String progresstext=driver.findElement(By.xpath("//*[@class='ui-growl-title']")).getText();
+		System.out.println(progresstext);
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -60,7 +75,7 @@ public class MouseActions {
 		// M.MouseActionsimplementation();
 		// M.DraganadDrop();
 		// M.othermouseactions();
-		M.Slider();
+		M.progressbar();
 	}
 
 }
