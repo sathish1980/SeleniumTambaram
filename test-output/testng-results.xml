@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="1" ignored="2" total="4" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Failed suite [Suite]" duration-ms="101" started-at="2023-06-02T08:06:10 IST" finished-at="2023-06-02T08:06:10 IST">
+    <groups>
+      <group name="Sanity">
+        <method signature="TestNGFirstclass.Testcase1()[pri:2, instance:TestNgConcepts.TestNGFirstclass@4fb64261]" name="Testcase1" class="TestNgConcepts.TestNGFirstclass"/>
+        <method signature="TestNGFirstclass.Testcase2()[pri:0, instance:TestNgConcepts.TestNGFirstclass@4fb64261]" name="Testcase2" class="TestNgConcepts.TestNGFirstclass"/>
+      </group> <!-- Sanity -->
+      <group name="SIT">
+        <method signature="TestNGFirstclass.Testcase1()[pri:2, instance:TestNgConcepts.TestNGFirstclass@4fb64261]" name="Testcase1" class="TestNgConcepts.TestNGFirstclass"/>
+      </group> <!-- SIT -->
+    </groups>
+    <test name="Test(failed)" duration-ms="101" started-at="2023-06-02T08:06:10 IST" finished-at="2023-06-02T08:06:10 IST">
+      <class name="TestNgConcepts.TestNGFirstclass">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:TestNgConcepts.TestNGFirstclass@4fb64261]" name="BeforeSuite" is-config="true" duration-ms="6" started-at="2023-06-02T08:06:10 IST" finished-at="2023-06-02T08:06:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method status="FAIL" signature="Testcase1()[pri:2, instance:TestNgConcepts.TestNGFirstclass@4fb64261]" name="Testcase1" duration-ms="73" started-at="2023-06-02T08:06:10 IST" finished-at="2023-06-02T08:06:10 IST">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
+            <message>
+              <![CDATA[Method TestNgConcepts.TestNGFirstclass.Testcase1() didn't finish within the time-out 60]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method TestNgConcepts.TestNGFirstclass.Testcase1() didn't finish within the time-out 60
+at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNewExecutor(MethodInvocationHelper.java:384)
+at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:283)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:604)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase1 -->
+        <test-method status="SKIP" signature="Testcase2()[pri:0, instance:TestNgConcepts.TestNGFirstclass@4fb64261]" name="Testcase2" duration-ms="0" started-at="2023-06-02T08:06:10 IST" depends-on-methods="TestNgConcepts.TestNGFirstclass.Testcase1" finished-at="2023-06-02T08:06:10 IST">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestNGFirstclass.Testcase2()[pri:0, instance:TestNgConcepts.TestNGFirstclass@4fb64261] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestNGFirstclass.Testcase2()[pri:0, instance:TestNgConcepts.TestNGFirstclass@4fb64261] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase2 -->
+      </class> <!-- TestNgConcepts.TestNGFirstclass -->
+    </test> <!-- Test(failed) -->
+  </suite> <!-- Failed suite [Suite] -->
+</testng-results>

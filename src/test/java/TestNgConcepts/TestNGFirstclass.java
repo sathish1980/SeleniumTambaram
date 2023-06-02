@@ -5,13 +5,13 @@ import org.testng.annotations.*;
 public class TestNGFirstclass 
 {
 
-	@Test(priority=0,dependsOnMethods="Testcase1")
+	@Test(priority=0,dependsOnMethods="Testcase1",groups="Sanity")
 	public void Testcase2()
 	{
 		System.out.println("Second TEst case");
 	}  
 	
-	@BeforeSuite
+	@BeforeSuite(alwaysRun=true)
 	public void BeforeSuite()
 	{
 		System.out.println("Before Suite");
@@ -30,21 +30,21 @@ public class TestNGFirstclass
 		System.out.println("Before Method");
 	}
 	
-	@Test(priority=2)
-	public void Testcase1()
+	@Test(priority=2,groups={"SIT","Sanity"},timeOut=60,invocationCount=3,invocationTimeOut=60)
+	public void Testcase1() throws InterruptedException
 	{
 		System.out.println("First TEst case");
+		Thread.sleep(50000);
 	}
 	
 	
-	
-	@Test(priority=3)
+	@Test(priority=3,groups={"Sanity","SIT"})
 	public void Testcase3()
 	{
 		System.out.println("Third TEst case");
 	} 
 	
-	@Test(priority=1,description ="login")
+	@Test(priority=1,description ="login",groups="SIT")
 	public void Testcase4()
 	{
 		System.out.println("Fouth TEst case");

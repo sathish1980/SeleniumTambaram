@@ -2,10 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+   <groups>		
+   <run>		
+    <include name="Sanity" />	
+   </run>		
+  </groups>
     <classes>
       <class name="TestNgConcepts.TestNGSecondClass"/>
       <class name="TestNgConcepts.TestNGFirstclass"/>
        <class name="TestNgConcepts.ThridClass"/>
     </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->
