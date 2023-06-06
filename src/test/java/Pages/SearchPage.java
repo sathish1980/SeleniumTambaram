@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import CommonElementsUtils.CommonElement;
 
@@ -14,16 +15,21 @@ public class SearchPage extends CommonElement {
 		this.driver=driver;
 	}
 	
-	public void SelectFromAndToValue()
+	public void SelectFromAndToValue(String fromValue,String toValue)
 	{
-		driver.findElement(By.xpath("//*[@for='fromCity']")).click();
+		WebElement fromButton = driver.findElement(By.xpath("//*[@for='fromCity']"));
+		ClickOnButton(fromButton);
 		WaitForElementToBeVisible(driver,By.xpath("(//ul[@role='listbox']//li)[1]"),60);
-		SelectTheValueFromList(driver, By.xpath("//ul[@role='listbox']//li"),"PNQ");
-		driver.findElement(By.xpath("//*[@for='toCity']")).click();
+		SelectTheValueFromList(driver, By.xpath("//ul[@role='listbox']//li"),fromValue);
+		WebElement toButton = driver.findElement(By.xpath("//*[@for='toCity']"));
+		ClickOnButton(toButton);
+		SelectTheValueFromList(driver, By.xpath("//ul[@role='listbox']//li"),toValue);
 		
-		SelectTheValueFromList(driver, By.xpath("//ul[@role='listbox']//li"),"MAA");
-
 	}
 	
+	public void SelectFlyFromDate(String datatoFly)
+	{
+		SelectValueinCalender(driver,datatoFly);
+	}
 
 }

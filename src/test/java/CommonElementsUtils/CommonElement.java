@@ -36,5 +36,35 @@ public class CommonElement {
 			}
 		}
 	}
+	
+	public void ClickOnButton(WebElement buttonElement)
+	{
+		if (buttonElement.isEnabled())
+			buttonElement.click();
+	}
+	
+	public boolean SelectValueinCalender(WebDriver driver,String expectedDay)
+	{
+		List<WebElement> totalWeekRows = driver.findElements(By.xpath("(//*[@class='DayPicker-Months']//div)[1]//div[@class='DayPicker-Week']"));
+		for(WebElement eachWeekRow : totalWeekRows)
+		{
+			List<WebElement> totalDaysInWeek = eachWeekRow.findElements(By.cssSelector("div[class^='DayPicker-Day']"));
+			for(WebElement eachDays : totalDaysInWeek)
+			{
+				String checkItsDisabled = eachDays.getAttribute("class");
+				if (!checkItsDisabled.contains("disabled"))
+				{
+					String eachDayValue =eachDays.findElement(By.cssSelector("[class='dateInnerCell']>p:nth-of-type(1)")).getText();
+					if(eachDayValue.equalsIgnoreCase(expectedDay))
+					{
+						eachDays.click();
+						return true;
+					}
+					
+				}
+			}
+		}
+		return false;
+	}
 
 }

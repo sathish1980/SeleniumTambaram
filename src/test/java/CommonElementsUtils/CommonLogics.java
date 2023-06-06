@@ -34,4 +34,6 @@ public class CommonLogics extends CommonElement{
 		WaitForElementToBeClickable(driver,By.xpath("//*[@class='ic_circularclose_grey']"),60);
 		driver.findElement(By.xpath("//*[@class='ic_circularclose_grey']")).click();
 	}
+	
+	
 }

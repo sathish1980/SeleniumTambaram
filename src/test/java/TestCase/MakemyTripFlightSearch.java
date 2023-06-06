@@ -43,7 +43,8 @@ public void EnterValidSearchCriteria()
 {
 	SearchPage sp = new SearchPage(driver);
 	
-	sp.SelectFromAndToValue();
+	sp.SelectFromAndToValue("PNQ","MAA");
+	sp.SelectFlyFromDate("20");
 }
 
 }

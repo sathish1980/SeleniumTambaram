@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10495" started-at="2023-06-06T08:36:09 IST" finished-at="2023-06-06T08:36:19 IST">
+  <suite name="Default suite" duration-ms="9372" started-at="2023-06-06T09:02:06 IST" finished-at="2023-06-06T09:02:16 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10495" started-at="2023-06-06T08:36:09 IST" finished-at="2023-06-06T08:36:19 IST">
+    <test name="Default test" duration-ms="9372" started-at="2023-06-06T09:02:06 IST" finished-at="2023-06-06T09:02:16 IST">
       <class name="TestCase.MakemyTripFlightSearch">
-        <test-method status="PASS" signature="launchTheBrowser()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="launchTheBrowser" is-config="true" duration-ms="2216" started-at="2023-06-06T08:36:06 IST" finished-at="2023-06-06T08:36:09 IST">
+        <test-method status="PASS" signature="launchTheBrowser()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="launchTheBrowser" is-config="true" duration-ms="2283" started-at="2023-06-06T09:02:04 IST" finished-at="2023-06-06T09:02:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchTheBrowser -->
-        <test-method status="PASS" signature="EnterTheURL()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="EnterTheURL" is-config="true" duration-ms="3631" started-at="2023-06-06T08:36:09 IST" finished-at="2023-06-06T08:36:12 IST">
+        <test-method status="PASS" signature="EnterTheURL()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="EnterTheURL" is-config="true" duration-ms="1783" started-at="2023-06-06T09:02:06 IST" finished-at="2023-06-06T09:02:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnterTheURL -->
-        <test-method status="PASS" signature="deleteAdds()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="deleteAdds" is-config="true" duration-ms="6222" started-at="2023-06-06T08:36:12 IST" finished-at="2023-06-06T08:36:19 IST">
+        <test-method status="PASS" signature="deleteAdds()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="deleteAdds" is-config="true" duration-ms="6247" started-at="2023-06-06T09:02:08 IST" finished-at="2023-06-06T09:02:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAdds -->
-        <test-method status="PASS" signature="EnterValidSearchCriteria()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="EnterValidSearchCriteria" duration-ms="614" started-at="2023-06-06T08:36:19 IST" finished-at="2023-06-06T08:36:19 IST">
+        <test-method status="PASS" signature="EnterValidSearchCriteria()[pri:0, instance:TestCase.MakemyTripFlightSearch@17d0685f]" name="EnterValidSearchCriteria" duration-ms="1319" started-at="2023-06-06T09:02:14 IST" finished-at="2023-06-06T09:02:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnterValidSearchCriteria -->
