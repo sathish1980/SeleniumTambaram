@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCase.FacebookLoginandLogout">
+      <class name="TestCase.MakemyTripFlightSearch">
         <methods>
-          <include name="PreStep"/>
-          <include name="MaxixmizeandEnterUrl"/>
-          <include name="Teardown"/>
-          <include name="FacebookLogin"/>
+          <include name="EnterValidSearchCriteria"/>
+          <include name="deleteAdds"/>
+          <include name="launchTheBrowser"/>
+          <include name="EnterTheURL"/>
         </methods>
-      </class> <!-- TestCase.FacebookLoginandLogout -->
+      </class> <!-- TestCase.MakemyTripFlightSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
