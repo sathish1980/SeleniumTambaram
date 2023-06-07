@@ -9,6 +9,8 @@ import CommonElementsUtils.CommonElement;
 public class SearchPage extends CommonElement {
 	
 	WebDriver driver;
+	public String FromCityName =null;
+	public String ToCityName =null;
 	
 	public SearchPage(WebDriver driver)
 	{
@@ -17,6 +19,7 @@ public class SearchPage extends CommonElement {
 	
 	public void SelectFromAndToValue(String fromValue,String toValue)
 	{
+		WaitForElementToBeClickable(driver,By.xpath("//*[@for='fromCity']"),60);
 		WebElement fromButton = driver.findElement(By.xpath("//*[@for='fromCity']"));
 		ClickOnButton(fromButton);
 		WaitForElementToBeVisible(driver,By.xpath("(//ul[@role='listbox']//li)[1]"),60);
@@ -30,6 +33,34 @@ public class SearchPage extends CommonElement {
 	public void SelectFlyFromDate(String datatoFly)
 	{
 		SelectValueinCalender(driver,datatoFly);
+	}
+	
+	public void GetTextofFromLocation()
+	{
+		FromCityName=GetTextOfelement(driver.findElement(By.xpath("//input[@id='fromCity']")));
+	}
+	
+	public void GetTextofToLocation()
+	{
+		ToCityName=GetTextOfelement(driver.findElement(By.xpath("//input[@id='toCity']")));
+	}
+	
+	public void ClickonSearchButton()
+	{
+		clickOnButton(driver.findElement(By.xpath("//*[@data-cy='submit']//a")));
+	}
+	
+	public String ValidateTextForAssertion()
+	{
+		String text1 =  "Flights from ";
+		String text2 =  " to ";
+		String ActualText = text1+FromCityName+text2+ToCityName;
+		return ActualText;
+	}
+	
+	public String GetSameCityError()
+	{
+		return GetTextOfelement(driver.findElement(By.xpath("//*[@data-cy='sameCityError']")));
 	}
 
 }

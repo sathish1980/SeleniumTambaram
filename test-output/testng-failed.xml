@@ -5,7 +5,8 @@
     <classes>
       <class name="TestCase.MakemyTripFlightSearch">
         <methods>
-          <include name="EnterValidSearchCriteria"/>
+          <include name="EnterSameFromandToInSearchCriteria"/>
+          <include name="BaseUrl"/>
           <include name="deleteAdds"/>
           <include name="launchTheBrowser"/>
           <include name="EnterTheURL"/>

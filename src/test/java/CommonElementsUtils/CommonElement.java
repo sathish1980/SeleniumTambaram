@@ -37,6 +37,7 @@ public class CommonElement {
 		}
 	}
 	
+	
 	public void ClickOnButton(WebElement buttonElement)
 	{
 		if (buttonElement.isEnabled())
@@ -65,6 +66,22 @@ public class CommonElement {
 			}
 		}
 		return false;
+	}
+	
+	public void clickOnButton(WebElement buttonElement)
+	{
+		
+		if (buttonElement.isDisplayed())
+		{
+			buttonElement.click();
+		}
+	}
+	
+	public String GetTextOfelement(WebElement getTextElement)
+	{
+		if(getTextElement.isDisplayed())
+			return getTextElement.getText();
+		return null;
 	}
 
 }

@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\sathishkumar\AppData\Local\Temp\testng-eclipse-263408703\testng-customsuite.xml</span>
+                    <span>C:\Users\sathishkumar\AppData\Local\Temp\testng-eclipse-1308380220\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestCase.MakemyTripFlightSearch" hash-for-method="EnterSameFromandToInSearchCriteria">EnterSameFromandToInSearchCriteria</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestCase.MakemyTripFlightSearch" hash-for-method="EnterValidSearchCriteria">EnterValidSearchCriteria</a> <!-- method navigator-link -->
@@ -127,6 +132,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="EnterSameFromandToInSearchCriteria">
+                  </a> <!-- EnterSameFromandToInSearchCriteria -->
+                  <span class="method-name">EnterSameFromandToInSearchCriteria</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="EnterValidSearchCriteria">
                   </a> <!-- EnterValidSearchCriteria -->
                   <span class="method-name">EnterValidSearchCriteria</span>
@@ -137,7 +149,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sathishkumar\AppData\Local\Temp\testng-eclipse-263408703\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sathishkumar\AppData\Local\Temp\testng-eclipse-1308380220\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,16 +198,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'EnterValidSearchCriteria')
 data.setCell(0, 2, 'TestCase.MakemyTripFlightSearch')
-data.setCell(0, 3, 1319);
+data.setCell(0, 3, 6134);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'EnterSameFromandToInSearchCriteria')
+data.setCell(1, 2, 'TestCase.MakemyTripFlightSearch')
+data.setCell(1, 3, 1549);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -228,16 +244,28 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">EnterTheURL</span>
-                <span class="method-start">2286 ms</span>
+                <span class="method-start">2186 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">deleteAdds</span>
-                <span class="method-start">4078 ms</span>
+                <span class="method-start">3885 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">EnterValidSearchCriteria</span>
-                <span class="method-start">10334 ms</span>
+                <span class="method-start">10186 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">BaseUrl</span>
+                <span class="method-start">16322 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">EnterSameFromandToInSearchCriteria</span>
+                <span class="method-start">23091 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">BaseUrl</span>
+                <span class="method-start">24641 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
