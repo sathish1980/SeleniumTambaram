@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="72247" started-at="2023-06-09T08:21:19 IST" finished-at="2023-06-09T08:22:31 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="72247" started-at="2023-06-09T08:21:19 IST" finished-at="2023-06-09T08:22:31 IST">
+      <class name="TestCase.MakemyTripFlightSearch">
+        <test-method status="PASS" signature="launch()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="launch" is-config="true" duration-ms="183" started-at="2023-06-09T08:21:19 IST" finished-at="2023-06-09T08:21:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="Maximize(java.lang.String)[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="Maximize" is-config="true" duration-ms="7060" started-at="2023-06-09T08:21:19 IST" finished-at="2023-06-09T08:21:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Maximize -->
+        <test-method status="PASS" signature="deleteAdds()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="deleteAdds" is-config="true" duration-ms="6236" started-at="2023-06-09T08:21:26 IST" finished-at="2023-06-09T08:21:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAdds -->
+        <test-method status="PASS" signature="EnterValidSearchCriteria(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="EnterValidSearchCriteria" duration-ms="8428" started-at="2023-06-09T08:21:32 IST" data-provider="SearchData" finished-at="2023-06-09T08:21:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BOM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MAA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterValidSearchCriteria -->
+        <test-method status="PASS" signature="BaseUrl()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="BaseUrl" is-config="true" duration-ms="6317" started-at="2023-06-09T08:21:41 IST" finished-at="2023-06-09T08:21:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseUrl -->
+        <test-method status="PASS" signature="EnterValidSearchCriteria(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="EnterValidSearchCriteria" duration-ms="6268" started-at="2023-06-09T08:21:47 IST" data-provider="SearchData" finished-at="2023-06-09T08:21:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PNQ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MAA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterValidSearchCriteria -->
+        <test-method status="PASS" signature="BaseUrl()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="BaseUrl" is-config="true" duration-ms="6198" started-at="2023-06-09T08:21:53 IST" finished-at="2023-06-09T08:22:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseUrl -->
+        <test-method status="PASS" signature="EnterValidSearchCriteria(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="EnterValidSearchCriteria" duration-ms="11634" started-at="2023-06-09T08:22:00 IST" data-provider="SearchData" finished-at="2023-06-09T08:22:11 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MAA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BLR]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterValidSearchCriteria -->
+        <test-method status="PASS" signature="BaseUrl()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="BaseUrl" is-config="true" duration-ms="9221" started-at="2023-06-09T08:22:11 IST" finished-at="2023-06-09T08:22:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseUrl -->
+        <test-method status="PASS" signature="EnterSameFromandToInSearchCriteria()[pri:1, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="EnterSameFromandToInSearchCriteria" duration-ms="641" started-at="2023-06-09T08:22:21 IST" finished-at="2023-06-09T08:22:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterSameFromandToInSearchCriteria -->
+        <test-method status="PASS" signature="BaseUrl()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="BaseUrl" is-config="true" duration-ms="9158" started-at="2023-06-09T08:22:21 IST" finished-at="2023-06-09T08:22:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseUrl -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="Teardown" is-config="true" duration-ms="827" started-at="2023-06-09T08:22:30 IST" finished-at="2023-06-09T08:22:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method status="PASS" signature="teatdown()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="teatdown" is-config="true" duration-ms="197" started-at="2023-06-09T08:22:31 IST" finished-at="2023-06-09T08:22:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teatdown -->
+        <test-method status="PASS" signature="teardonw()[pri:0, instance:TestCase.MakemyTripFlightSearch@25af5db5]" name="teardonw" is-config="true" duration-ms="21" started-at="2023-06-09T08:22:31 IST" depends-on-methods="TestCase.MakemyTripFlightSearch.teatdown" finished-at="2023-06-09T08:22:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardonw -->
+      </class> <!-- TestCase.MakemyTripFlightSearch -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

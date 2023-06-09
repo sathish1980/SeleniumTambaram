@@ -12,18 +12,19 @@ import org.testng.annotations.*;
 import com.relevantcodes.extentreports.LogStatus;
 
 import BrowserDriver.BrowserLaunch;
+import BrowserDriver.Browserdriver;
 import CommonElementsUtils.CommonLogics;
 import Pages.SearchPage;
 import Pages.SerachResultFlightSelectionPage;
 import Utils.ExcelFileHandling;
 import Utils.PropertyFileHandle;
 
-public class MakemyTripFlightSearch extends BrowserLaunch {
+public class MakemyTripFlightSearch extends Browserdriver {
 	
 	String currentUrl =null;
 	CommonLogics c = new CommonLogics();
 	
-@BeforeSuite
+/*@BeforeSuite
 public void launchTheBrowser()
 {
 	launch();
@@ -34,27 +35,31 @@ public void launchTheBrowser()
 public void EnterTheURL()
 {
 	currentUrl = PropertyFileHandle.propreaddata().getProperty("url");
-	driver.get(currentUrl);
+	// driver.get(currentUrl);
+	getdriver().get(currentUrl);
 	test.log(LogStatus.INFO, "The following url is enterd : "+currentUrl);
-}
+}*/
 
 @BeforeClass
 public void deleteAdds() throws InterruptedException
 {
 	Thread.sleep(5000);
 	CommonLogics c = new CommonLogics();
-	c.ClickIfElementExist(driver,"//*[@class='close']");
+	//c.ClickIfElementExist(driver,"//*[@class='close']");
+	c.ClickIfElementExist(getdriver(),"//*[@class='close']");
+	
 	test.log(LogStatus.INFO, "The first popup window closed sucessfully");
 
-	c.ClickOnAddClose(driver);
+	//c.ClickOnAddClose(driver);
+	c.ClickOnAddClose(getdriver());
 	test.log(LogStatus.INFO, "The second popup window closed sucessfully");
 }
 
 @Test(priority=0,dataProvider="SearchData",dataProviderClass=DataProviderImplementations.class)
 public void EnterValidSearchCriteria(String fromcity, String toCity, String Date)
 {
-	SearchPage sp = new SearchPage(driver);
-	
+	//SearchPage sp = new SearchPage(driver);
+	SearchPage sp = new SearchPage(getdriver());
 	sp.SelectFromAndToValue(fromcity,toCity);
 	test.log(LogStatus.INFO, "The "+fromcity +" as from city and "+toCity+" as to city is selected sucessfully");
 	sp.SelectFlyFromDate(Date);
@@ -63,29 +68,37 @@ public void EnterValidSearchCriteria(String fromcity, String toCity, String Date
 	sp.ClickonSearchButton();
 	test.log(LogStatus.INFO, "Search button is clicked suecssfully");
 	
-	SerachResultFlightSelectionPage SRP = new SerachResultFlightSelectionPage(driver);
+	//SerachResultFlightSelectionPage SRP = new SerachResultFlightSelectionPage(driver);
+	SerachResultFlightSelectionPage SRP = new SerachResultFlightSelectionPage(getdriver());
+	
 	SRP.ClickOnPopupOkGotIt();
 	test.log(LogStatus.INFO, "ok Got it popup is clicked suecssfully");
 	
 	
 	SRP.GetTextOfFlightFrom();
-	String validateScreenShot= c.takescreenshot(driver);
+	//String validateScreenShot= c.takescreenshot(driver);
+	
+	String validateScreenShot= c.takescreenshot(getdriver());
 	test.log(LogStatus.INFO, "Search Text is validated sucessfully");
 	
 	Assert.assertEquals(sp.ValidateTextForAssertion(), "Flights from "+sp.FromCityName+" to "+sp.ToCityName);
 	test.log(LogStatus.PASS, "All the Steps are executed sucessfully", test.addScreenCapture(validateScreenShot));
 	
-	driver.navigate().back();
+	//driver.navigate().back();
+	getdriver().navigate().back();
 	//Flights from Pune to Chennai
 }
 
 @AfterMethod
 public void BaseUrl() throws InterruptedException
 {
-	driver.get(currentUrl);
+	//driver.get(currentUrl);
+	getdriver().get(Urlvalue);
 	Thread.sleep(5000);
 	// c = new CommonLogics();
-	c.ClickIfElementExist(driver,"//*[@class='close']");
+	//c.ClickIfElementExist(driver,"//*[@class='close']");
+	c.ClickIfElementExist(getdriver(),"//*[@class='close']");
+	
 	// c.ClickOnAddClose(driver);
 
 }
@@ -93,10 +106,14 @@ public void BaseUrl() throws InterruptedException
 @Test(priority=1)
 public void EnterSameFromandToInSearchCriteria()
 {
-	SearchPage sp = new SearchPage(driver);
+	//SearchPage sp = new SearchPage(driver);
+	
+	SearchPage sp = new SearchPage(getdriver());
 	
 	sp.SelectFromAndToValue("MAA","MAA");
-	String validateScreenShot= c.takescreenshot(driver);
+	//String validateScreenShot= c.takescreenshot(driver);
+	
+	String validateScreenShot= c.takescreenshot(getdriver());
 	
 	Assert.assertEquals(sp.GetSameCityError(), "From & To airports cannot be the same");
 	test.log(LogStatus.PASS, "Same From and To is validated sucessfully", test.addScreenCapture(validateScreenShot));
@@ -109,7 +126,8 @@ public void EnterSameFromandToInSearchCriteria()
 public void teatdown()
 {
 	report.flush();
-	driver.quit();
+	//driver.quit();
+	getdriver().quit();
 }
 
 
